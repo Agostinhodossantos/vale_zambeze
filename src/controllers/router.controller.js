@@ -5,8 +5,7 @@ const home = (req, res) => {
 }
 
 const document = (req, res) => {
-    // let data = provider.getFiles()
-
+   // let data = provider.getFiles()
     res.render('pages/document')
 }
 
@@ -18,10 +17,14 @@ const delegation = (req, res) => {
     res.render('pages/delegation-details')
 }
 
+const form = (req, res) => {
+    res.render("pages/form")
+}
+
 const sendEmail = (req, res) => {
     let email = req.params.email
     let response = provider.sendEmail(email)
-    console.log(response)
+    res.status(response.status).send(response)
 }
 
 
@@ -31,5 +34,6 @@ module.exports = {
     document,
     study,
     delegation,
-    sendEmail
+    sendEmail,
+    form
 }

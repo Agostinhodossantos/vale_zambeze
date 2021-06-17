@@ -31,7 +31,6 @@ let dataList = [{
 function sendEmail(email) {
     axios.post(`http://127.0.0.1:3000/send/${email}`, dataList)
         .then(function(res) {
-            console.log(res)
             return res
         }).catch(function(error) {
             console.log(error)
