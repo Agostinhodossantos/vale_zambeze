@@ -237,5 +237,5 @@
 
 // Select file 
 var btnSelect = document.querySelectorAll(".btn-outline-primary");
-btnSelect.addEventListener('click', )
+btnSelect.ad
 

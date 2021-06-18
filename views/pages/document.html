@@ -30,76 +30,77 @@
             <!-- End Blog Header -->
 
 
-            <div class="container mt-5 mb-5">
-                <div class="d-flex justify-content-center row">
-                    <div class="col-md-10">
-                        <div class="row p-2 bg-white border rounded">
-                            <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" src="https://i.imgur.com/QpjAiHq.jpg"></div>
-                            <div class="col-md-6 mt-1">
-                                <h5>Document 1</h5>
-                             
-                               
-                               
-                                <p class="text-justify  para mb-0">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.<br><br></p>
-                            </div>
-                            <div class="align-items-center align-content-center col-md-3 border-left mt-1">
-                                <div class="d-flex flex-row align-items-center">
-                                    <!-- <h4 class="mr-1">  $13.99</h4><span class="strike-text">$20.99</span> -->
-                                </div>
-                               
-                                <div class="d-flex flex-column mt-4"><button class="btn btn-outline-primary btn-sm mt-2" type="button">Selecionar</button></div>
-                            </div>
-                        </div>
-                        <div class="row p-2 bg-white border rounded mt-2">
-                            <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" src="https://i.imgur.com/JvPeqEF.jpg"></div>
-                            <div class="col-md-6 mt-1">
-                                <h5>Document 2</h5>
+            <form action="email" method="POST" id="send">
+
+                <div class="container mt-5 mb-5">
+                    <div class="d-flex justify-content-center row">
+                        <div class="col-md-10">
                             
-                               
-                                <p class="text-justify  para mb-0">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.<br><br></p>
-                            </div>
-                            <div class="align-items-center align-content-center col-md-3 border-left mt-1">
-                                <div class="d-flex flex-row align-items-center">
-                                    <!-- <h4 class="mr-1">$14.99</h4><span class="strike-text">$20.99</span> -->
+                            <%var i = 0%>
+                            <% if(typeof data != 'undefined') { %>
+                                <% data.forEach(function(value) {
+                                    i++;
+                                    %>
+
+
+                            <div class="row p-2 bg-white border rounded mt-2 list">
+                                <div class="col-md-2 mt-1"><img class="img-fluid img-responsive rounded product-image" src="https://firebasestorage.googleapis.com/v0/b/sadc-vale.appspot.com/o/frame%2FFrame_10.jpg?alt=media&token=b305143a-a62f-4fc4-8377-118055002f2d"></div>
+                                <div class="col-md-6 mt-1">
+                                    <h5> <%=value.name %></h5>
+                                   
+                                    <p class="text-justify  para mb-0"> <%=value.description %> <br><br></p>
                                 </div>
-                               
-                                <div class="d-flex flex-column mt-4"><button class="btn btn-outline-primary btn-sm mt-2" type="button">Selecionar</button></div>
-                            </div>
-                        </div>
-                        <div class="row p-2 bg-white border rounded mt-2">
-                            <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" src="https://i.imgur.com/Bf4dIaN.jpg"></div>
-                            <div class="col-md-6 mt-1">
-                                <h5>Document 3</h5>
-                               
-                                <p class="text-justify  para mb-0">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.<br><br></p>
-                            </div>
-                            <div class="align-items-center align-content-center col-md-3 border-left mt-1">
-                                <div class="d-flex flex-row align-items-center">
-                                    <!-- <h4 class="mr-1">$13.99</h4><span class="strike-text">$20.99</span> -->
+                                <div class="align-items-center align-content-center col-md-3 border-left mt-1">
+                                    <div class="d-flex flex-row align-items-center">
+                                        <!-- <h4 class="mr-1">$13.99</h4><span class="strike-text">$20.99</span> -->
+                                    </div>
+                                   
+                                    <div class="d-flex flex-row mt-4">
+
+                                    
+
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" name="<%=value.uid %>" value="<%=value.uid %>" id="<%=value.uid %>">
+                                            <label class="form-check-label btn btn-outline-primary" for="<%=value.uid %>">Selecionar</label>
+                                          </div>
+                                        
+
+                                    </div>
                                 </div>
-                               
-                                <div class="d-flex flex-column mt-4"><button class="btn btn-outline-primary btn-sm mt-2" type="button">Selecionar</button></div>
                             </div>
-                        </div>
-                        <div class="row p-2 bg-white border rounded mt-2">
-                            <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" src="https://i.imgur.com/HO8e9b8.jpg"></div>
-                            <div class="col-md-6 mt-1">
-                                <h5>Document</h5>
-                                                              
+
+                            <% }) %>
+                            <% } else { %>
+                              <!-- list is empty -->
+                            <% } %>
+
+                             <div class="row send">
+                                <div class="form-group col-md-6">
                                
-                                <p class="text-justify  para mb-0">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.<br><br></p>
-                            </div>
-                            <div class="align-items-center align-content-center col-md-3 border-left mt-1">
-                                <div class="d-flex flex-row align-items-center">
-                                    <!-- <h4 class="mr-1">$15.99</h4><span class="strike-text">$21.99</span> -->
-                                </div>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="Digite o seu email">
+                                    <small id="emailHelp" class="form-text text-muted">Vai receber todos documentos selecionados neste email.</small>
+                                  </div>
+
+                                  <div class="form-group col-md-6">
                                
-                                <div class="d-flex flex-column mt-4"><button class="btn btn-outline-primary btn-sm mt-2" type="button">Selecionar</button></div>
-                            </div>
+                                    <button type="submit" class="btn btn-primary">Enviar</button>
+                                    
+                                  </div>
+                             </div>
+                            
+
+
                         </div>
                     </div>
                 </div>
-            </div>
+
+
+                
+
+
+
+              
+            </form>
 
          
 
@@ -108,7 +109,28 @@
 
         <!-- ======= Footer ======= -->
         <%- include('../partials/footer.html') %>
-            <!-- End  Footer -->
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+
+        <script>
+        document
+          .getElementById("send")
+          .addEventListener("submit", (event) => {
+           
+            alertSuccess()
+        })
+
+        function alertSuccess() {
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Documentos enviados com sucesso!',
+                showConfirmButton: false,
+                timer: 1500
+            })
+        }
+        </script>
 
 
 

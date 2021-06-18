@@ -7,7 +7,7 @@ router.get('/', routerController.home)
 router.get('/study/:id', routerController.study)
 router.get('/document', routerController.document)
 router.get('/delegation/:id', routerController.delegation)
-router.post('/email/:email', routerController.sendEmail)
+router.post('/email', routerController.sendEmail)
 router.get('/form', routerController.form)
 
 module.exports = router

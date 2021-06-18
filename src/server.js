@@ -6,6 +6,8 @@ const routes = require('./routes/index.js')
 
 // setup view engine
 app.use(express.static('public'))
+app.use(express.urlencoded({ extended: true }))
+app.use(express.json())
 app.set('view engine', 'html')
 app.engine('html', ejs.renderFile)
 app.use(routes)

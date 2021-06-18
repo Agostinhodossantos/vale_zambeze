@@ -4,9 +4,9 @@ const home = (req, res) => {
     res.render('pages/index')
 }
 
-const document = (req, res) => {
-   // let data = provider.getFiles()
-    res.render('pages/document')
+const document = async(req, res) => {
+    let data = await provider.getFiles()
+    res.render('pages/document', data)
 }
 
 const study = (req, res) => {
@@ -21,10 +21,28 @@ const form = (req, res) => {
     res.render("pages/form")
 }
 
-const sendEmail = (req, res) => {
-    let email = req.params.email
-    let response = provider.sendEmail(email)
-    res.status(response.status).send(response)
+const sendEmail = async(req, res) => {
+   let data = req.body;
+   let email = data.email;
+   delete data.email
+   const values = Object.values(data)
+
+   let uidList = []
+
+   values.forEach(value => {
+       uidList.push({uid: value})
+   })
+
+
+    let response = await provider.sendEmail(email, uidList)
+
+
+    if (response != null && response) {
+        res.redirect("/")
+    } else {
+        res.redirect("/document")
+    }
+
 }
 
 
