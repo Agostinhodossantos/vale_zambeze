@@ -250,137 +250,32 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-3 col-sm-3 col-xs-12">
-                            <div class="single-team-member">
-                                <div class="team-img">
-                                    <a href="/delegation/1">
-                                        <img src="assets/img/team/1.jpg" alt="">
-                                    </a>
-                                    <!-- <div class="team-social-icon text-center">
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <i class="bi bi-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="bi bi-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="bi bi-instagram"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div> -->
-                                </div>
-                                <div class="team-content text-center">
-                                    <h6>Delegação de Tete</h6>
-                                    <!-- <p>Seo</p> -->
-                                </div>
-                            </div>
-                        </div>
+                        
+                    <% if(typeof data != 'undefined') { %>
+                        <% data.forEach(function(value) { %>
+
                         <!-- End column -->
                         <div class="col-md-3 col-sm-3 col-xs-12">
                             <div class="single-team-member">
                                 <div class="team-img">
-                                    <a href="/delegation/1">
-                                        <img src="assets/img/team/2.jpg" alt="">
+                                    <a href="/delegation/<%= value.uid%>">
+                                        <img src="<%= value.img%>" alt="">
                                     </a>
-                                    <!-- <div class="team-social-icon text-center">
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <i class="bi bi-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="bi bi-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="bi bi-instagram"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div> -->
+                                    
                                 </div>
                                 <div class="team-content text-center">
-                                    <h6>Delegação de Manica</h6>
+                                    <h6><%= value.name%></h6>
                                     <!-- <p>Web Developer</p> -->
                                 </div>
                             </div>
                         </div>
-                        <!-- End column -->
-                        <div class="col-md-3 col-sm-3 col-xs-12">
-                            <div class="single-team-member">
-                                <div class="team-img">
-                                    <a href="/delegation/1">
-                                        <img src="assets/img/team/3.jpg" alt="">
-                                    </a>
-                                    <!-- <div class="team-social-icon text-center">
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <i class="bi bi-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="bi bi-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="bi bi-instagram"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div> -->
-                                </div>
-                                <div class="team-content text-center">
-                                    <h6> Delegação de Sofala</h6>
-                                    <!-- <p>Web Design</p> -->
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End column -->
-                        <div class="col-md-3 col-sm-3 col-xs-12">
-                            <div class="single-team-member">
-                                <div class="team-img">
-                                    <a href="/delegation/1">
-                                        <img src="assets/img/team/4.jpg" alt="">
-                                    </a>
-                                    <!-- <div class="team-social-icon text-center">
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <i class="bi bi-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="bi bi-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="bi bi-instagram"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div> -->
-                                </div>
-                                <div class="team-content text-center">
-                                    <h6>Delegação de Zambézia</h6>
-                                    <!-- <p>Seo Expert</p> -->
-                                </div>
-                            </div>
-                        </div>
+
+                        <% }) %>
+                        <% } else { %>
+                              <!-- list is empty -->
+                        <% } %>
+                       
+                     
                         <!-- End column -->
                     </div>
                 </div>
@@ -519,14 +414,13 @@
                             <div class="single-awesome-project">
                                 <div class="awesome-img">
                                     <a href="#"><img src="assets/img/portfolio/6.jpg" alt="" /></a>
-                                    <!-- <div class="add-actions text-center">
+                                    <div class="add-actions text-center">
                                         <div class="project-dec">
                                             <a class="portfolio-lightbox" data-gallery="myGallery" href="assets/img/portfolio/6.jpg">
-                                                <h4>Night Hill</h4>
-                                                <span>Photoshop</span>
+                                                
                                             </a>
                                         </div>
-                                    </div> -->
+                                    </div>
                                 </div>
                             </div>
                         </div>

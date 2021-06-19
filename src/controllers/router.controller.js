@@ -1,7 +1,8 @@
 const provider = require('../controllers/provider')
 
-const home = (req, res) => {
-    res.render('pages/index')
+const home = async(req, res) => {
+    var data = await provider.getDelegation()
+    res.render('pages/index', data)
 }
 
 const document = async(req, res) => {
@@ -13,12 +14,29 @@ const study = (req, res) => {
     res.render('pages/study-details')
 }
 
-const delegation = (req, res) => {
-    res.render('pages/delegation-details')
+const delegation = async(req, res) => {
+    let id = req.params.id
+    let data = await provider.getDelegationById(id)
+
+    console.log(data)
+    res.render('pages/delegation-details', data)
 }
 
 const form = (req, res) => {
     res.render("pages/form")
+}
+
+const project = (req, res) => {
+    let id = req.params.id
+    res.render('pages/project')
+}
+
+const blog = (req, res) => {
+    res.render('pages/blog')
+}
+
+const add_delegation = (req, res) => {
+    res.render('pages/add_delegation')
 }
 
 const sendEmail = async(req, res) => {
@@ -53,5 +71,8 @@ module.exports = {
     study,
     delegation,
     sendEmail,
-    form
+    form,
+    blog,
+    project,
+    add_delegation
 }

@@ -40,45 +40,45 @@
                 <div class="container mt-5 mb-5">
                     <div class="d-flex justify-content-center row">
                         <div class="col-md-10">
-                            
-                            <%var i = 0%>
-                            <% if(typeof data != 'undefined') { %>
-                                <% data.forEach(function(value) {
-                                    i++;
-                                    %>
 
 
-                            <div class="row p-2 bg-white border rounded mt-2 list">
-                                <div class="col-md-2 mt-1"><img class="img-fluid img-responsive rounded product-image" src="https://firebasestorage.googleapis.com/v0/b/sadc-vale.appspot.com/o/frame%2FFrame_10.jpg?alt=media&token=b305143a-a62f-4fc4-8377-118055002f2d"></div>
-                                <div class="col-md-6 mt-1">
-                                    <h5> <%=value.name %></h5>
-                                   
-                                    <p class="text-justify  para mb-0"> <%=value.description %> <br><br></p>
-                                </div>
-                                <div class="align-items-center align-content-center col-md-3 border-left mt-1">
-                                    <div class="d-flex flex-row align-items-center">
-                                        <!-- <h4 class="mr-1">$13.99</h4><span class="strike-text">$20.99</span> -->
-                                    </div>
-                                   
-                                    <div class="d-flex flex-row mt-4">
 
-                                    
-
-                                        <div class="form-check">
-                                            <input type="checkbox" class="form-check-input" name="<%=value.uid %>" value="<%=value.uid %>" id="<%=value.uid %>">
-                                            <label class="form-check-label btn btn-outline-primary" for="<%=value.uid %>">Selecionar</label>
-                                          </div>
-                                        
-
-                                    </div>
-                                </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="name" placeholder="Nome da delegação">
                             </div>
 
-                            <% }) %>
-                            <% } else { %>
-                              <!-- list is empty -->
-                            <% } %>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="name" placeholder="Nome da delegação">
+                            </div>
 
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="name" placeholder="Nome da delegação">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="name" placeholder="Nome da delegação">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="name" placeholder="Nome da delegação">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="name" placeholder="Nome da delegação">
+                            </div>
+                            
+                            
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Descricao</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+
+
+
+
+
+                            
+                     
                              <div class="row send">
                                 <div class="form-group col-md-6">
                                

@@ -1,8 +1,9 @@
 const axios = require('axios');
+require('dotenv').config()
 const BASE_URL = process.env.BASE_URL
 
 async function sendEmail(email, dataList) {
-    return await axios.post(`http://127.0.0.1:3000/send/${email}`, dataList)
+    return await axios.post(`${BASE_URL}/send/${email}`, dataList)
         .then(function(res) {
             return res.data
         }).catch(function(error) {
@@ -11,8 +12,29 @@ async function sendEmail(email, dataList) {
         })
 }
 
+async function getDelegationById(uid) {
+    return await axios.get(`${BASE_URL}/delegation/${uid}`)
+        .then(function(res){
+            return res
+        })
+        .catch(function(error) {
+            console.log(error)
+            return null
+        })
+}
+
+async function getDelegation() {
+    return await axios.get(`${BASE_URL}/delegation`)
+    .then(function(data) {
+        return data
+    })
+    .catch(function(error) {
+        return null
+    })
+}
+
 async function getFiles() {
-    return await axios.get(`http://127.0.0.1:3000/files`)
+    return await axios.get(`${BASE_URL}/files`)
         .then(function(data) {
             
             return data
@@ -24,5 +46,7 @@ async function getFiles() {
 
 module.exports = {
     sendEmail,
-    getFiles
+    getFiles,
+    getDelegation,
+    getDelegationById
 }

@@ -9,5 +9,10 @@ router.get('/document', routerController.document)
 router.get('/delegation/:id', routerController.delegation)
 router.post('/email', routerController.sendEmail)
 router.get('/form', routerController.form)
+router.get('/project/:id', routerController.project)
+router.get('/blog', routerController.blog)
+
+
+router.get('/add_delegation', routerController.add_delegation)
 
 module.exports = router
