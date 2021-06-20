@@ -37,11 +37,13 @@ const project = async(req, res) => {
     let id_del = req.params.id_del
 
     let data = await provider.getDelegationProjectById(id, id_del)
-    let projects = await provider.getDelegationProjects(id)
+    let projects = await provider.getDelegationProjects(id_del)
     projects = projects.data
 
+    console.log(projects)
+
     
-    res.render('pages/project', {data, projects})
+    res.render('pages/project', {data, projects, id_del})
 }
 
 const blog = (req, res) => {

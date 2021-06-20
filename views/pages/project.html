@@ -53,53 +53,30 @@
                                         <h4>Outros projectos</h4>
                                         <div class="recent-post">
                                             <!-- start single post -->
-                                            <div class="recent-single-post">
-                                                <div class="post-img">
-                                                    <a href="#">
-                                                        <img src="/assets/img/blog/1.jpg" alt="">
-                                                    </a>
-                                                </div>
-                                                <div class="pst-content">
-                                                    <p><a href="#"> Redug Lerse dolor sit amet consect adipis elit.</a></p>
-                                                </div>
-                                            </div>
-                                            <!-- End single post -->
+                                            <% if(typeof projects != 'undefined') { %>
+                                                <% projects.forEach(function(project) { %>
                                             <!-- start single post -->
                                             <div class="recent-single-post">
                                                 <div class="post-img">
-                                                    <a href="#">
-                                                        <img src="/assets/img/blog/2.jpg" alt="">
+                                                    <a href="/delegation/<%= id_del%>/project/<%= project.uid %>">
+                                                        <img src="<%= project.img %>" alt="">
                                                     </a>
                                                 </div>
                                                 <div class="pst-content">
-                                                    <p><a href="#"> Redug Lerse dolor sit amet consect adipis elit.</a></p>
+                                                    <p><a href="/delegation/<%= id_del %>/project/<%= project.uid %>"> <%= project.name%> </a></p>
                                                 </div>
                                             </div>
                                             <!-- End single post -->
-                                            <!-- start single post -->
-                                            <div class="recent-single-post">
-                                                <div class="post-img">
-                                                    <a href="#">
-                                                        <img src="/assets/img/blog/3.jpg" alt="">
-                                                    </a>
-                                                </div>
-                                                <div class="pst-content">
-                                                    <p><a href="#"> Redug Lerse dolor sit amet consect adipis elit.</a></p>
-                                                </div>
-                                            </div>
+
+                                            <% }) %>
+                                            <% } else { %>
+                                                  <!-- list is empty -->
+                                            <% } %>
+                                           
+
+
                                             <!-- End single post -->
-                                            <!-- start single post -->
-                                            <div class="recent-single-post">
-                                                <div class="post-img">
-                                                    <a href="#">
-                                                        <img src="/assets/img/blog/4.jpg" alt="">
-                                                    </a>
-                                                </div>
-                                                <div class="pst-content">
-                                                    <p><a href="#"> Redug Lerse dolor sit amet consect adipis elit.</a></p>
-                                                </div>
-                                            </div>
-                                            <!-- End single post -->
+                                           
                                         </div>
                                     </div>
                                     <!-- recent end -->
@@ -109,16 +86,16 @@
                                 <div class="single-blog-page">
                                     <div class="left-tags blog-tags">
                                         <div class="popular-tag left-side-tags left-blog">
-                                            <h4>popular tags</h4>
+                                            <h4>Navegar</h4>
                                             <ul>
                                                 <li>
-                                                    <a href="#">Portfolio</a>
+                                                    <a href="#">Pagina oficial</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Project</a>
+                                                    <a href="#">Estudos</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Design</a>
+                                                    <a href="#">Projectos</a>
                                                 </li>
                                                 <li>
                                                     <a href="#">wordpress</a>
@@ -149,7 +126,7 @@
                                     <!-- single-blog start -->
                                     <article class="blog-post-wrapper">
                                         <div class="post-thumbnail">
-                                            <img src="/assets/img/blog/6.jpg" alt="" />
+                                            <img src=" <%= data.img %> " alt="" />
                                         </div>
                                         <div class="post-information">
                                             <h2><%=data.name%></h2>
@@ -165,7 +142,8 @@
 
                                             </div>
                                             <div class="entry-content">
-                                                <p>Aliquam et metus pharetra, bibendum massa nec, fermentum odio. Nunc id leo ultrices, mollis ligula in, finibus tortor. Mauris eu dui ut lectus fermentum eleifend. Pellentesque faucibus sem ante, non malesuada
+                                                <p> <%- data.description %> </p>
+                                                <!-- <p>Aliquam et metus pharetra, bibendum massa nec, fermentum odio. Nunc id leo ultrices, mollis ligula in, finibus tortor. Mauris eu dui ut lectus fermentum eleifend. Pellentesque faucibus sem ante, non malesuada
                                                     odio varius nec. Suspendisse potenti. Proin consectetur aliquam odio nec fringilla. Sed interdum at justo in efficitur. Vivamus gravida volutpat sodales. Fusce ornare sit amet ligula condimentum sagittis.</p>
                                                 <blockquote>
                                                     <p>Quisque semper nunc vitae erat pellentesque, ac placerat arcu consectetur. In venenatis elit ac ultrices convallis. Duis est nisi, tincidunt ac urna sed, cursus blandit lectus. In ullamcorper sit amet
@@ -174,7 +152,7 @@
                                                 <p>Aenean et tempor eros, vitae sollicitudin velit. Etiam varius enim nec quam tempor, sed efficitur ex ultrices. Phasellus pretium est vel dui vestibulum condimentum. Aenean nec suscipit nibh. Phasellus nec
                                                     lacus id arcu facilisis elementum. Curabitur lobortis, elit ut elementum congue, erat ex bibendum odio, nec iaculis lacus sem non lorem. Duis suscipit metus ante, sed convallis quam posuere quis. Ut
                                                     tincidunt eleifend odio, ac fringilla mi vehicula nec. Nunc vitae lacus eget lectus imperdiet tempus sed in dui. Nam molestie magna at risus consectetur, placerat suscipit justo dignissim. Sed vitae
-                                                    fringilla enim, nec ullamcorper arcu.</p>
+                                                    fringilla enim, nec ullamcorper arcu.</p> -->
                                             </div>
                                         </div>
                                     </article>
