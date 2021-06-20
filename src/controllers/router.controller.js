@@ -2,6 +2,7 @@ const provider = require('../controllers/provider')
 
 const home = async(req, res) => {
     var data = await provider.getDelegation()
+    
     res.render('pages/index', data)
 }
 
@@ -17,18 +18,30 @@ const study = (req, res) => {
 const delegation = async(req, res) => {
     let id = req.params.id
     let data = await provider.getDelegationById(id)
+    let projects = await provider.getDelegationProjects(id)
 
-    console.log(data)
-    res.render('pages/delegation-details', data)
+    projects = projects.data
+    data = data.data
+
+ 
+
+    res.render('pages/delegation-details', {data, projects})
 }
 
 const form = (req, res) => {
     res.render("pages/form")
 }
 
-const project = (req, res) => {
+const project = async(req, res) => {
     let id = req.params.id
-    res.render('pages/project')
+    let id_del = req.params.id_del
+
+    let data = await provider.getDelegationProjectById(id, id_del)
+    let projects = await provider.getDelegationProjects(id)
+    projects = projects.data
+
+    
+    res.render('pages/project', {data, projects})
 }
 
 const blog = (req, res) => {

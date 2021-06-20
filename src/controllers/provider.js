@@ -23,6 +23,28 @@ async function getDelegationById(uid) {
         })
 }
 
+async function getDelegationProjects(uid) {
+    return await axios.get(`${BASE_URL}/delegation/${uid}/project`)
+        .then(function(data) {
+            return data
+        })
+        .catch(function(error) {
+            return null
+        })
+}
+
+async function getDelegationProjectById(uid, uidProject) {
+    return await axios.get(`${BASE_URL}/delegation/${uidProject}/project/${uid}`)
+    .then(function(res) {
+        return res.data
+    })
+    .catch(function(error) {
+
+        console.log(error)
+        return null
+    })
+}
+
 async function getDelegation() {
     return await axios.get(`${BASE_URL}/delegation`)
     .then(function(data) {
@@ -48,5 +70,7 @@ module.exports = {
     sendEmail,
     getFiles,
     getDelegation,
-    getDelegationById
+    getDelegationById,
+    getDelegationProjects,
+    getDelegationProjectById
 }

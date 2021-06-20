@@ -9,7 +9,7 @@ router.get('/document', routerController.document)
 router.get('/delegation/:id', routerController.delegation)
 router.post('/email', routerController.sendEmail)
 router.get('/form', routerController.form)
-router.get('/project/:id', routerController.project)
+router.get('/delegation/:id_del/project/:id', routerController.project)
 router.get('/blog', routerController.blog)
 
 
