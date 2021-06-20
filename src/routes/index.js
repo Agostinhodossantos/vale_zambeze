@@ -11,6 +11,7 @@ router.post('/email', routerController.sendEmail)
 router.get('/form', routerController.form)
 router.get('/delegation/:id_del/project/:id', routerController.project)
 router.get('/blog', routerController.blog)
+router.get('/project-list', routerController.project_list)
 
 
 router.get('/add_delegation', routerController.add_delegation)

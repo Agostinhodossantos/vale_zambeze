@@ -100,8 +100,8 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="<%= data.tradingBook %>">
-                                                    <p><span class="text-primary">Documentos:</span> Carteira de negocios</p>
+                                                <a href="">
+                                                    <p><span class="text-primary">Documentos:</span>  <a href="https://firebasestorage.googleapis.com/v0/b/sadc-vale.appspot.com/o/doc%2FVersao%20Port%20Cadeia%20de%20Valor%20de%20Oleaginosas.pdf?alt=media&token=c7d9ada7-b0ba-4476-a035-213be1e63820">Apresentação da <%= data.name %></a>  </p>
                                                 </a>
                                             </li>
 
@@ -111,11 +111,7 @@
                                                 </a>
                                             </li>
 
-                                            <li>
-                                                <a href="#">
-                                                    <p><span class="text-primary">Redes socias:</span> Facebook</p>
-                                                </a>
-                                            </li>
+                                            
                                             <!-- <li>
                                             <a href="#">Html</a>
                                         </li>
@@ -137,13 +133,13 @@
                                     <!-- single-blog start -->
                                     <article class="blog-post-wrapper">
                                         <div class="post-thumbnail">
-                                            <!-- <img src="/assets/img/blog/6.jpg" alt="" /> -->
+                                            <img style="width: 100%; height: 400px;" src="<%= data.img %>" alt="" />
 
-                                            <% if(data.video != '') { %>
+                                            <!-- <% if(data.video != '') { %>
                                                 <iframe width="100%" height="400" src="<%= data.video%>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                             <% } else { %>
                                                 <iframe width="100%" height="400" src="https://www.youtube.com/embed/6Af6b_wyiwI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                            <% } %>
+                                            <% } %> -->
 
                                                 
 
@@ -156,7 +152,7 @@
                                                 <span><i class="bi bi-clock"></i> Junho 18, 2021</span>
                                                 <span class="tag-meta">
                         <i class="bi bi-folder"></i>
-                        <a href="<%=data.tradingBook%>">Carteira de negocios da Agência do Zambeze</a>,
+                        <a href="<%=data.tradingBook%>"> Apresentação da <%= data.name %> </a>,
                         <!-- <a href="#">projectos</a> -->
                       </span>
                                                 <span>
@@ -170,6 +166,9 @@
 
 
                                                 <p><%- data.description %></p>
+                                                
+                                                <!-- <a href="<%=data.tradingBook%>">  </a> -->
+
                                                 <!-- <p>Aliquam et metus pharetra, bibendum massa nec, fermentum odio. Nunc id leo ultrices, mollis ligula in, finibus tortor. Mauris eu dui ut lectus fermentum eleifend. Pellentesque faucibus sem ante, non malesuada
                                                     odio varius nec. Suspendisse potenti. Proin consectetur aliquam odio nec fringilla. Sed interdum at justo in efficitur. Vivamus gravida volutpat sodales. Fusce ornare sit amet ligula condimentum sagittis.</p>
                                                 <blockquote>

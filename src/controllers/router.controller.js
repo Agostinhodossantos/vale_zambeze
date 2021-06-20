@@ -50,6 +50,10 @@ const blog = (req, res) => {
     res.render('pages/blog')
 }
 
+const project_list = (req, res) => {
+    res.render('pages/project-list')
+}
+
 const add_delegation = (req, res) => {
     res.render('pages/add_delegation')
 }
@@ -89,5 +93,6 @@ module.exports = {
     form,
     blog,
     project,
-    add_delegation
+    add_delegation,
+    project_list
 }
