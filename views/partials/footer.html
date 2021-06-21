@@ -101,3 +101,28 @@
 
 <!-- Template Main JS File -->
 <script src="/assets/js/main.js"></script>
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyBhfLBi8klLzSVADmsMrYp4yj_TdjyAXxo",
+    authDomain: "sadc-vale.firebaseapp.com",
+    projectId: "sadc-vale",
+    storageBucket: "sadc-vale.appspot.com",
+    messagingSenderId: "508540240225",
+    appId: "1:508540240225:web:966c7a5c1bdebd2ae08520",
+    measurementId: "G-8ZLPH06R7W"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
