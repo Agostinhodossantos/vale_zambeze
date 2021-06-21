@@ -1,6 +1,6 @@
 const axios = require('axios');
 require('dotenv').config()
-const BASE_URL = process.env.BASE_URL_LOCAL
+const BASE_URL = process.env.BASE_URL
 
 console.log(BASE_URL)
 
