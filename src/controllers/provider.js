@@ -1,6 +1,8 @@
 const axios = require('axios');
 require('dotenv').config()
-const BASE_URL = process.env.BASE_URL
+const BASE_URL = process.env.BASE_URL_LOCAL
+
+console.log(BASE_URL)
 
 async function sendEmail(email, dataList) {
     return await axios.post(`${BASE_URL}/send/${email}`, dataList)
