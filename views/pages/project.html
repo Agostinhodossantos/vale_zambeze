@@ -57,7 +57,7 @@
                                                 <% projects.forEach(function(project) { %>
                                             <!-- start single post -->
                                             <div class="recent-single-post">
-                                                <div class="post-img">
+                                                <div class="post-img" style="max-height: 60px;">
                                                     <a href="/delegation/<%= id_del%>/project/<%= project.uid %>">
                                                         <img src="<%= project.img %>" alt="">
                                                     </a>
@@ -94,7 +94,7 @@
                                     <!-- single-blog start -->
                                     <article class="blog-post-wrapper">
                                         <div class="post-thumbnail">
-                                            <img style="max-height: 500px; min-width: 500px;" src=" <%= data.img %> " alt="" />
+                                            <img style="max-height: 500px; min-width: 600px;" src=" <%= data.img %> " alt="" />
                                         </div>
                                         <div class="post-information">
                                             <h2><%=data.name%></h2>

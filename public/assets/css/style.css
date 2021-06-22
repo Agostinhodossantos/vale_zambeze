@@ -292,6 +292,7 @@ div#preloader {
   background-size: cover;
   background-position: top center;
   padding: 120px 0 60px;
+  max-height: 200px;
 }
 
 .header-bg::before {

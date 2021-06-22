@@ -40,8 +40,6 @@ const project = async(req, res) => {
     let projects = await provider.getDelegationProjects(id_del)
     projects = projects.data
 
-    console.log(projects)
-
     
     res.render('pages/project', {data, projects, id_del})
 }
